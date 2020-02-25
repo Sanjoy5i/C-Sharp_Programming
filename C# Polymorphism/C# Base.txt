@@ -1,0 +1,81 @@
+// C# base keyword: accessing base class field
+
+using System;
+public class animal
+{
+  public string color = "Blue";
+}
+
+public class dog:animal
+{
+  string color = "Yellow";
+
+  public void show_color ()
+  {
+    Console.WriteLine (base.color);
+    Console.WriteLine (color);
+  }
+}
+
+public class testBase
+{
+  public static void Main ()
+  {
+    dog d = new dog ();
+    d.show_color ();
+  }
+}
+
+========================
+
+//C# base keyword example: calling base class method
+
+using System;  
+public class animal{  
+    public virtual void eat(){  
+        Console.WriteLine("eating");  
+    }  
+}  
+public class dog: animal  
+{  
+    public override void eat()  
+    {  
+        base.eat();  
+        Console.WriteLine("eating bread");  
+    }  
+      
+}  
+public class testBase  
+{  
+    public static void Main()  
+    {  
+        dog d = new dog();  
+        d.eat();  
+    }  
+} 
+
+
+==========================
+
+// C# inheritance: calling base class constructor internally
+
+using System;  
+public class animal{  
+    public animal(){  
+        Console.WriteLine("animal");  
+    }  
+}  
+public class dog: animal  
+{  
+    public dog()  
+    {  
+        Console.WriteLine("dog");  
+    }     
+}  
+public class testOverriding  
+{  
+    public static void Main()  
+    {  
+        dog d = new dog();  
+    }  
+}  

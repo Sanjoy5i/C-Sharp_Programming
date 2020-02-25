@@ -1,0 +1,105 @@
+// C# Sealed class
+
+using System;
+sealed public class Animal
+{
+  public void eat ()
+  {
+    Console.WriteLine ("eating");
+  }
+}
+public class Dog:Animal
+{
+  public void bark ()
+  {
+    Console.WriteLine ("barking");
+  }
+}
+public class testSealed
+{
+  public static void Main ()
+  {
+    Dog d = new Dog ();
+      d.eat ();
+      d.bark ();
+  }
+}
+
+
+==================
+
+//C# Sealed method
+
+using System;
+
+public class Animal
+{
+
+  public virtual void eat ()
+  {
+    Console.WriteLine ("eating");
+  }
+  public virtual void run ()
+  {
+    Console.WriteLine ("running");
+  }
+
+}
+
+public class Dog:Animal
+{
+
+  public override void eat ()
+  {
+    Console.WriteLine ("eating bread");
+  }
+  public sealed override void run ()
+  {
+
+    Console.WriteLine ("running very fast");
+
+  }
+}
+
+public class BabyDog:Dog
+{
+
+  public override void eat ()
+  {
+    Console.WriteLine ("eating biscuits");
+  }
+  public override void run ()
+  {
+    Console.WriteLine ("running slowly");
+  }
+}
+
+public class testSealed
+{
+
+  public static void Main ()
+  {
+
+    BabyDog d = new BabyDog ();
+
+      d.eat ();
+
+      d.run ();
+
+  }
+}
+
+
+===============
+
+
+using System;  
+public class testSealed  
+{  
+    public static void Main()  
+    {  
+        sealed int x = 10;  
+        x++;  
+        Console.WriteLine(x);  
+    }  
+}  
