@@ -1,0 +1,17 @@
+using System;
+public static class math
+{
+  public static float pi = 3.1416f;
+  public static int cube (int num)
+  {
+      return num*num*num;
+  }
+}
+
+
+class testMath{
+    public static void Main(string[] args){
+        Console.WriteLine("Value of pi is : "+math.pi);
+        Console.WriteLine("Cube of 3 is : "+math.cube(3));
+    }
+}

@@ -1,0 +1,37 @@
+using System;
+
+public class student
+{
+  public int id;
+  public string name;
+  public float CGPA;
+
+  public void insert (int i, string n, float c)
+  {
+    id = i;
+    name = n;
+    CGPA = c;
+  }
+  public void display ()
+  {
+    Console.WriteLine ("id: "+id + "\tName: " + name + "\tCGPA " + CGPA);
+  }
+}
+
+class m_student_c
+{
+  public static void Main (string[] args)
+  {
+    student s1 = new student ();
+    student s2 = new student ();
+    student s3 = new student ();
+
+      s1.insert (1, "Sanjoy", 3.50f);
+      s2.insert (2, "Lutfor", 3.75f);
+      s3.insert (3, "Amit", 3.35f);
+
+      s1.display ();
+      s2.display ();
+      s3.display ();
+  }
+}

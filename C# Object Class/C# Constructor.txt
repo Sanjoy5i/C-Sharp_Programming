@@ -1,0 +1,52 @@
+using System;
+
+
+public class student
+{
+
+  public int id;
+
+  public string name;
+
+  public float CGPA;
+
+
+  public student (int i, string n, float s)
+  {
+
+    id = i;
+
+    name = n;
+
+    CGPA = s;
+
+  }
+  public void display ()
+  {
+
+    Console.WriteLine (id + " " + name + " " + CGPA);
+
+  }
+}
+
+class m_student_c
+{
+
+  public static void Main (string[]args)
+  {
+
+    student s1 = new student (1, "Sanjoy", 3.5f);
+
+    student s2 = new student (2, "Lutfor", 3.7f);
+
+    student s3 = new student (3, "Badhon", 3.45f);
+
+
+      s1.display ();
+
+      s2.display ();
+
+      s3.display ();
+
+  }
+}

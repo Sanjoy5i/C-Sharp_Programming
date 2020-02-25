@@ -1,0 +1,32 @@
+using System;
+
+public class enumExample{
+    public enum days{Sun,Mon,Tue,Wed,Thu,Fri,Sat};
+    
+    public static void Main(){
+        int i=(int)days.Mon;
+        int j=(int)days.Thu;
+        int k=(int)days.Sun;
+        
+        Console.WriteLine(Mon={0},i);
+        Console.WriteLine(Thu={0},j);
+        Console.WriteLine(Sun={0},k);
+    }
+}
+
+
+
+========================
+
+using System;
+
+public class enumExample{
+    public enum days{Sun,Mon,Tue,Wed,Thu,Fri,Sat};
+    
+    public static void Main(){
+        foreach(days d in Enum.GetValues(typeof(days))){
+            Console.WriteLine(d);
+        }
+    }
+}
+

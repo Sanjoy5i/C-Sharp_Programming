@@ -1,0 +1,15 @@
+using System;
+
+public struct student{
+    public int id;
+    public string name;
+}
+
+public class m_student_c{
+    public static void Main(string[] args){
+        student s1=new student();
+        s1.id=1;
+        s1.name="Sanjoy";
+        Console.WriteLine("id : "+s1.id+"\nname : "+s1.name);
+    }
+}
