@@ -1,0 +1,35 @@
+// C# Encapsulation
+
+namespace AccessSpecifiers  
+{  
+    class Student  
+    {  
+        // Creating setter and getter for each property  
+        public string ID { get; set; }  
+        public string Name { get; set; }  
+        public string Email { get; set; }  
+    }  
+}  
+
+using System;  
+namespace AccessSpecifiers  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            Student s = new Student();  
+            // Setting values to the properties  
+            s.ID = "101";  
+            s.Name = "Mohan Ram";  
+            s.Email = "mohan@example.com";  
+            // getting values  
+            Console.WriteLine("ID = "+s.ID);  
+            Console.WriteLine("Name = "+s.Name);  
+            Console.WriteLine("Email = "+s.Email);  
+        }  
+    }  
+}  
+
+=====================
+
